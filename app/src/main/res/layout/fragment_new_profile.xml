@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_new_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new Profile"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="26sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="48dp"
+        />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Profile name:"
+        android:gravity="center"
+        android:layout_below="@+id/titleTV"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/nameTV"
+        android:layout_below="@+id/titleTV"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="8dp"
+        android:gravity="left"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:singleLine="true"
+        android:focusable="true"
+        />
+
+    <TextView
+        android:id="@+id/typeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Detection type:"
+        android:gravity="center"
+        android:layout_below="@id/nameTV"
+        android:padding="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/typeSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/typeTV"
+        android:layout_below="@+id/nameTV"
+        android:layout_alignBottom="@+id/typeTV"
+        android:hint="Select"
+        android:focusable="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:singleLine="true"
+        />
+
+    <TextView
+        android:id="@+id/rangeTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typeTV"
+        android:text="Set the range:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignLeft="@+id/typeTV"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="24dp"
+    />
+
+    <SeekBar
+        android:id="@+id/rangeSB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangeTitleTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:max="20"
+        android:progress="10"
+        />
+
+    <TextView
+        android:id="@+id/minRangeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangeSB"
+        android:text="0m"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignLeft="@+id/rangeSB"
+        />
+
+    <TextView
+        android:id="@+id/maxRangeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangeSB"
+        android:text="1km"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignRight="@+id/rangeSB"
+        />
+
+    <TextView
+        android:id="@+id/currentRangeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangeSB"
+        android:text="500m"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        />
+
+    <Button
+        android:id="@+id/appsBN"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/colorAccent"
+        android:text="List of apps"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/minRangeTV"
+        android:layout_marginTop="24dp"
+        android:layout_alignLeft="@+id/rangeTitleTV"
+        android:layout_marginLeft="8dp"
+        />
+
+    <Button
+        android:id="@+id/pictureBN"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/colorAccent"
+        android:text="Choose picture"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/appsBN"
+        android:layout_marginTop="24dp"
+        android:layout_alignLeft="@+id/rangeTitleTV"
+        android:layout_marginLeft="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/pictureIV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/pictureBN"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        />
+
+
+    <Button
+        android:id="@+id/saveBN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/colorAccent"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

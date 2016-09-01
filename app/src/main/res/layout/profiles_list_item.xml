@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="16dp"
+    android:layout_gravity="center"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:id="@+id/profile_item_layout"
+    >
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:text="Profile name"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginStart="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/typeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:text="Profile type"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingTop="18dp"
+        android:paddingBottom="14dp"
+        />
+
+    <CheckBox
+        android:id="@+id/activeCB"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        />
+
+    <View
+        android:id="@+id/lineV"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
